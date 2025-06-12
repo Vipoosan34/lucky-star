@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Star Restaurant</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="icon" href="img/favicon_io/favicon.ico" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <!----> 
+    <header>
+      <nav class="navbar">
+         <div class="navbar-container">
+           <div class="logo-title">
+            <img src="img/logo.png" alt="logo" class="logo-img">
+            <h1 class="site-title">Lucky Star</h1>
+          </div>
+          <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+          <ul class="nave-links" id="nav-links">
+
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">reservation</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+         <!---->
+    <section class="hero">
+        <div class="content">
+        <h2>Welcome to Lucky Star 🌟</h2>
+        <p>Where great food brings good fortune</p>
+        </div>
+
+    </section>
+
+
+    <section class="section"  id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-container">   
+          <div class="menu-item">
+             <img src="img/coffee.jpg" alt="coffee" class="menu-img">
+             <h3>Special Coffee</h3>
+             <p>RM 12.00</p>
+            </div> 
+
+          <div class="menu-item">
+             <img src="img/sandwich.jpg" alt="sandwich" class="menu-img">
+             <h3>Chicken Sandwich</h3>
+               <p>RM 18.00</p>
+            </div>
+
+
+            <div class="menu-item">
+             <img src="img/desser.jpg" alt="Choocolate cake" class="menu-img">
+             <h3>Choocolate cake</h3>
+               <p>RM 10.00</p>
+            </div>
+              
+            <div class="menu-item">
+             <img src="img/breakfast.jpg" alt="Breakfast" class="menu-img">
+             <h3>Breakfast</h3>
+               <p>RM 18.00</p>
+            </div>
+
+            <div class="menu-item">
+             <img src="img/orange.jpg" alt="Fresh juice" class="menu-img">
+             <h3>Fresh juice</h3>
+               <p>RM 18.00</p>
+            </div>
+
+            <div class="menu-item">
+             <img src="img/passta.jpg" alt="Pasta" class="menu-img">
+             <h3>Pasta</h3>
+               <p>RM 18.00</p>
+            </div>   
+        </div>      
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h2>About us</h2>
+        <p>At Lucky Star, we believe that great food brings people together. Our restaurant is built on passion, quality, and a love for warm, comforting meals. Every cup of coffee, every bite of food is carefully prepared to bring you joy. Whether you're here to relax, meet friends, or enjoy a quiet moment, Lucky Star is your happy place.</p>
+    </section>
+
+
+
+
+
+    <section class="section" id="contact">
+  <h2>Reserve a table</h2>
+
+  <form id="reservation-form">
+    <input type="text" id="name" placeholder="your name" required>
+    <input type="email" id="email" placeholder="your email" required>
+    <input type="number" id="people" placeholder="number of people" required>
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <button type="submit">Reserve Now</button>
+  </form>
+
+  <p id="success-message" style="display: none; color: green; text-align: center; margin-top: 10px;">
+    ✅ Thank you! Your reservation has been submitted.
+  </p>
+</section>
+
+   <footer>
+    <p>&copy; 2025 Lucky Star. Made with ❤️🇱🇰 by vipoos.</p>
+   </footer>
+<script>
+  const form = document.getElementById('reservation-form');
+  const successMessage = document.getElementById('success-message');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent real submission
+    successMessage.style.display = 'block'; // show message
+    form.reset(); // clear form fields
+  });  
+
+
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+
+</script>
+
+
+</body>
+</html>
