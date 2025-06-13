@@ -27,16 +27,22 @@ body {
 .logo-title {
   display: flex;
   align-items: center;
+  gap: 6px;
+
 }
 .logo-img {
   height: 40px;
-  margin-right: 8px;
+  width: 40px;
+  object-fit: cover;
+  margin-right:0;
+  border-radius: 50%;
 }
 .site-title {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;
+  white-space: nowrap;
 }
 .nav-links {
   display: flex;
@@ -55,10 +61,11 @@ body {
   color: #f4b400;
 }
 .menu-toggle {
-  display: none;
-  font-size: 26px;
+  display: block;
+  font-size: 28px;
   color: white;
   cursor: pointer;
+  margin-left: auto;
 }
 
 /* Hero */
@@ -237,7 +244,7 @@ footer {
     padding: 20px;
   }
   .site-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .menu-item {
     padding: 10px;
@@ -247,5 +254,64 @@ footer {
   }
   input,textarea,button{
     font-size: 15px;
+  }
+  .logo-img {
+    height: 35px;
+  }
+  #reservation-form input[type="date"],
+  #reservation-form input[type="time"] {
+  font-size: 14px;
+  padding: 10px;
+
+}
+}
+@media (max-width: 600px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-title {
+    flex: 1;
+    gap: 6px;
+  }
+
+  .logo-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .site-title {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    font-size: 26px;
+    margin-left: auto;
+  }
+
+  #reservation-form input,
+  #reservation-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #reservation-form {
+    gap: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 14px;
   }
 }
