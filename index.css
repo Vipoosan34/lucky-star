@@ -171,6 +171,17 @@ h2 {
   width: 100%;
   box-sizing: border-box;
 }
+#reservation-form input[type="date"],
+#reservation-form input[type="time"] {
+  flex: 1;
+  min-width: 140px;
+}
+#reservation-form .date-time-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 #reservation-form button {
   background-color: #6f4e37;
   color: #fff;
