@@ -165,8 +165,8 @@ h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 0 15px;
+  gap: 10px;
+  padding: 10px;
 }
 #reservation-form textarea,
 #reservation-form input,
@@ -178,15 +178,31 @@ h2 {
   width: 100%;
   box-sizing: border-box;
 }
+.date-time-group label {
+  font-size: 14px;
+  width: 100%;
+  color: #444;
+  margin-bottom: -5px;
+}
+
 #reservation-form input[type="date"],
 #reservation-form input[type="time"] {
   flex: 1;
-  min-width: 140px;
+  min-width: 160px;
+  background-color: #fff;
+  color: #333;
+  padding:  10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: 'poppins' sans-serif;
+  cursor: pointer;
 }
 #reservation-form .date-time-group {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
+  margin-top: 10px;
   justify-content: space-between;
 }
 #reservation-form button {
@@ -262,8 +278,11 @@ footer {
   #reservation-form input[type="time"] {
   font-size: 14px;
   padding: 10px;
+ }
+ .date-time-group {
+  flex-direction: column;
+ }
 
-}
 }
 @media (max-width: 600px) {
   .navbar-container {
